@@ -1,28 +1,15 @@
 
-# Tech-Admin | Laravel 8 + Bootstrap 4 
+# Tech-Admin | Laravel 8
 
-Tech-Admin is Admin Panel With Preset of Roles, Permissions, ACL, User Management, Profile Management.
-
-
-
-
-## Features
-
-- Mobile Responsive Bootstrap 4 Design
-- User Management with Roles
-- Role Management
-- Permissions Management
-- Access Control List (ACL)
-- Laravel 8 + Bootstrap 4
 
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript, jQuery, VueJs, Bootstrap 4
+**Client:** HTML, CSS, JavaScript, VueJs, Bootstrap 4
 
 **Server:** PHP, Laravel 8
 
-**DataBase:** MySql
+**DataBase:** SQLite
 
 
 ## Installation
