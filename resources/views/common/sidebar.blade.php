@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-university"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Tech-Admin</div>
+        <div class="sidebar-brand-text mx-3">Fora Landings</div>
     </a>
 
     <!-- Divider -->
@@ -23,7 +23,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Management
+        Пользователи
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -31,14 +31,99 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#taTpDropDown"
             aria-expanded="true" aria-controls="taTpDropDown">
             <i class="fas fa-user-alt"></i>
-            <span>User Management</span>
+            <span>Пользователи</span>
         </a>
         <div id="taTpDropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">User Management:</h6>
-                <a class="collapse-item" href="{{ route('users.index') }}">List</a>
-                <a class="collapse-item" href="{{ route('users.create') }}">Add New</a>
-                <a class="collapse-item" href="{{ route('users.import') }}">Import Data</a>
+                <h6 class="collapse-header">Действия :</h6>
+                <a class="collapse-item" href="{{ route('users.index') }}">Список</a>
+                <a class="collapse-item" href="{{ route('users.create') }}">Добавить</a>
+                <a class="collapse-item" href="{{ route('users.import') }}">Импорт данных</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Адреса Оффисов
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp1DropDown"
+           aria-expanded="true" aria-controls="Tp1DropDown">
+            <i class="fas fa-building"></i>
+            <span>Оффисы и банкоматы</span>
+        </a>
+        <div id="Tp1DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('offices.index') }}">Список</a>
+                <a class="collapse-item" href="{{ route('offices.create') }}">Добавить</a>
+                <a class="collapse-item" href="{{ route('offices.import') }}">Импорт из .exc</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp2DropDown"
+           aria-expanded="true" aria-controls="Tp2DropDown">
+            <i class="fas fa-city"></i>
+            <span>Города</span>
+        </a>
+        <div id="Tp2DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('cities.index') }}">Список</a>
+                <a class="collapse-item" href="{{ route('cities.create') }}">Добавить</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp3DropDown"
+           aria-expanded="true" aria-controls="Tp3DropDown">
+            <i class="fas fa-calendar"></i>
+            <span>Графики работ</span>
+        </a>
+        <div id="Tp3DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('work_schedules.index') }}">Список</a>
+                <a class="collapse-item" href="{{ route('work_schedules.create') }}">Добавить</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp4DropDown"
+           aria-expanded="true" aria-controls="Tp4DropDown">
+            <i class="fas fa-user-alt"></i>
+            <span>Типы Клиентов</span>
+        </a>
+        <div id="Tp4DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('type_of_clients.index') }}">Список</a>
+                <a class="collapse-item" href="{{ route('type_of_clients.create') }}">Добавить</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp5DropDown"
+           aria-expanded="true" aria-controls="Tp5DropDown">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Валюты</span>
+        </a>
+        <div id="Tp5DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('currencies.index') }}">Список</a>
+                <a class="collapse-item" href="{{ route('currencies.create') }}">Добавить</a>
             </div>
         </div>
     </li>

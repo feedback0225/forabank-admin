@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OfficeController;
+use App\Http\Controllers\TypeOfClientController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkScheduleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,7 +42,7 @@ Route::resource('roles', App\Http\Controllers\RolesController::class);
 // Permissions
 Route::resource('permissions', App\Http\Controllers\PermissionsController::class);
 
-// Users 
+// Users
 Route::middleware('auth')->prefix('users')->name('users.')->group(function(){
     Route::get('/', [UserController::class, 'index'])->name('index');
     Route::get('/create', [UserController::class, 'create'])->name('create');
@@ -47,11 +52,63 @@ Route::middleware('auth')->prefix('users')->name('users.')->group(function(){
     Route::delete('/delete/{user}', [UserController::class, 'delete'])->name('destroy');
     Route::get('/update/status/{user_id}/{status}', [UserController::class, 'updateStatus'])->name('status');
 
-    
+
     Route::get('/import-users', [UserController::class, 'importUsers'])->name('import');
     Route::post('/upload-users', [UserController::class, 'uploadUsers'])->name('upload');
 
     Route::get('export/', [UserController::class, 'export'])->name('export');
+});
 
+
+// Offices
+Route::middleware('auth')->prefix('offices')->name('offices.')->group(function () {
+    Route::get('/', [OfficeController::class, 'index'])->name('index');
+    Route::get('/create', [OfficeController::class, 'create'])->name('create');
+    Route::post('/store', [OfficeController::class, 'store'])->name('store');
+    Route::get('/edit/{office}', [OfficeController::class, 'edit'])->name('edit');
+    Route::put('/update/{office}', [OfficeController::class, 'update'])->name('update');
+    Route::delete('/delete/{office}', [OfficeController::class, 'delete'])->name('destroy');
+
+    Route::get('/import-offices', [UserController::class, 'importOffices'])->name('import');
+});
+
+// Cities
+Route::middleware('auth')->prefix('cities')->name('cities.')->group(function () {
+    Route::get('/', [CityController::class, 'index'])->name('index');
+    Route::get('/create', [CityController::class, 'create'])->name('create');
+    Route::post('/store', [CityController::class, 'store'])->name('store');
+    Route::get('/edit/{city}', [CityController::class, 'edit'])->name('edit');
+    Route::put('/update/{city}', [CityController::class, 'update'])->name('update');
+    Route::delete('/delete/{city}', [CityController::class, 'delete'])->name('destroy');
+});
+
+// Work Schedules
+Route::middleware('auth')->prefix('work_schedules')->name('work_schedules.')->group(function () {
+    Route::get('/', [WorkScheduleController::class, 'index'])->name('index');
+    Route::get('/create', [WorkScheduleController::class, 'create'])->name('create');
+    Route::post('/store', [WorkScheduleController::class, 'store'])->name('store');
+    Route::get('/edit/{work_schedule}', [WorkScheduleController::class, 'edit'])->name('edit');
+    Route::put('/update/{work_schedule}', [WorkScheduleController::class, 'update'])->name('update');
+    Route::delete('/delete/{work_schedule}', [WorkScheduleController::class, 'delete'])->name('destroy');
+});
+
+// Type Of Clients
+Route::middleware('auth')->prefix('type_of_clients')->name('type_of_clients.')->group(function () {
+    Route::get('/', [TypeOfClientController::class, 'index'])->name('index');
+    Route::get('/create', [TypeOfClientController::class, 'create'])->name('create');
+    Route::post('/store', [TypeOfClientController::class, 'store'])->name('store');
+    Route::get('/edit/{type_of_client}', [TypeOfClientController::class, 'edit'])->name('edit');
+    Route::put('/update/{type_of_client}', [TypeOfClientController::class, 'update'])->name('update');
+    Route::delete('/delete/{type_of_client}', [TypeOfClientController::class, 'delete'])->name('destroy');
+});
+
+// Currencies
+Route::middleware('auth')->prefix('currencies')->name('currencies.')->group(function () {
+    Route::get('/', [CurrencyController::class, 'index'])->name('index');
+    Route::get('/create', [CurrencyController::class, 'create'])->name('create');
+    Route::post('/store', [CurrencyController::class, 'store'])->name('store');
+    Route::get('/edit/{currency}', [CurrencyController::class, 'edit'])->name('edit');
+    Route::put('/update/{currency}', [CurrencyController::class, 'update'])->name('update');
+    Route::delete('/delete/{currency}', [CurrencyController::class, 'delete'])->name('destroy');
 });
 
