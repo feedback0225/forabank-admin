@@ -53,7 +53,7 @@
                             name="name"
                             value="{{ old('name') }}">
 
-                        @error('last_name')
+                        @error('')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
@@ -90,32 +90,32 @@
 
                     {{-- Ширина --}}
                     <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
-                        <label for="longitude"><span style="color:red;">*</span>Ширина</label>
+                        <label for="lat"><span style="color:red;">*</span>Ширина</label>
                         <input
                             type="text"
-                            class="form-control form-control-user @error('longitude') is-invalid @enderror"
-                            id="exampleLongitude"
+                            class="form-control form-control-user @error('lat') is-invalid @enderror"
+                            id="exampleLat"
                             placeholder="Ширина"
-                            name="longitude"
-                            value="{{ old('longitude') }}">
+                            name="lat"
+                            value="{{ old('lat') }}">
 
-                        @error('longitude')
+                        @error('lat')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
 
                     {{-- Долгота --}}
                     <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
-                        <label for="latitude"><span style="color:red;">*</span>Долгота</label>
+                        <label for="lng"><span style="color:red;">*</span>Долгота</label>
                         <input
                             type="text"
-                            class="form-control form-control-user @error('latitude') is-invalid @enderror"
-                            id="exampleLatitude"
+                            class="form-control form-control-user @error('lng') is-invalid @enderror"
+                            id="exampleLng"
                             placeholder="Долгота"
-                            name="latitude"
-                            value="{{ old('latitude') }}">
+                            name="lng"
+                            value="{{ old('lng') }}">
 
-                        @error('latitude')
+                        @error('lng')
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
@@ -129,7 +129,7 @@
                                 <option value="{{$currency->id}}">{{$currency->type}}</option>
                             @endforeach
                         </select>
-                        @error('role_id')
+                        @error('currency')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>

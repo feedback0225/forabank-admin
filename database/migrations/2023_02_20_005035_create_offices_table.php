@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('offices', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('city_id');
+            $table->string('name');
             $table->string('address');
             $table->double('lat')->nullable();
             $table->double('lng')->nullable();

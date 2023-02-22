@@ -9,6 +9,8 @@ class TypeOfClient extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function workSchedules() {
         return $this->hasMany(WorkSchedule::class);
     }
