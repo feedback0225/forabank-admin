@@ -3,7 +3,6 @@
 @section('title', 'Добавить Офис или Банкомат')
 
 @section('content')
-
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -25,8 +24,6 @@
             @csrf
             <div class="card-body">
                 <div class="form-group row">
-
-
 
                     {{-- Город --}}
                     <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
@@ -58,44 +55,14 @@
                         @enderror
                     </div>
 
-                    {{-- Адрес --}}
+                    {{-- Широта --}}
                     <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
-                        <label for="address"><span style="color:red;">*</span>Адрес</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-user @error('address') is-invalid @enderror"
-                            id="exampleAddress"
-                            placeholder="Адрес"
-                            name="address"
-                            value="{{ old('address') }}">
-
-                        @error('address')
-                            <span class="text-danger">{{$message}}</span>
-                        @enderror
-                    </div>
-
-                    {{-- Графики Работ --}}
-                    <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
-                        <label for="city_id">Графики работ</label>
-                        <select class="form-control form-control-user" name="work_schedules[]" multiple="multiple" @error('work_schedules') is-invalid @enderror>
-                            <option selected disabled>Выберите подходящие графики</option>
-                            @foreach ($work_schedules as $key => $work_schedule)
-                                <option value="{{$work_schedule->id}}">{{$work_schedule->schedule}}</option>
-                            @endforeach
-                        </select>
-                        @error('city_id')
-                        <span class="text-danger">{{$message}}</span>
-                        @enderror
-                    </div>
-
-                    {{-- Ширина --}}
-                    <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
-                        <label for="lat"><span style="color:red;">*</span>Ширина</label>
+                        <label for="lat"><span style="color:red;">*</span>Широта</label>
                         <input
                             type="text"
                             class="form-control form-control-user @error('lat') is-invalid @enderror"
                             id="exampleLat"
-                            placeholder="Ширина"
+                            placeholder="Широта"
                             name="lat"
                             value="{{ old('lat') }}">
 
@@ -120,11 +87,26 @@
                         @enderror
                     </div>
 
+                    {{-- Адрес --}}
+                    <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
+                        <label for="address"><span style="color:red;">*</span>Адрес</label>
+                        <input
+                            type="text"
+                            class="form-control form-control-user @error('address') is-invalid @enderror"
+                            id="exampleAddress"
+                            placeholder="Адрес"
+                            name="address"
+                            value="{{ old('address') }}">
+
+                        @error('address')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
+
                     {{-- Валюты --}}
                     <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
                         <label for="currencies">Валюты</label>
-                        <select class="form-control form-control-user @error('currencies') is-invalid @enderror" name="currencies">
-                            <option selected disabled>Выберите валюты</option>
+                        <select class="form-control form-control-user @error('currencies') is-invalid @enderror" name="currencies[]" multiple>
                             @foreach ($currencies as $currency)
                                 <option value="{{$currency->id}}">{{$currency->type}}</option>
                             @endforeach
@@ -134,18 +116,6 @@
                         @enderror
                     </div>
 
-                    {{-- Статус --}}
-                    <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
-                        <label for="is_active">Статус</label>
-                        <select class="form-control form-control-user @error('is_active') is-invalid @enderror" name="is_active">
-                            <option selected disabled>Статус Работы</option>
-                            <option value="1" selected>Активный</option>
-                            <option value="0">Не активный</option>
-                        </select>
-                        @error('is_active')
-                            <span class="text-danger">{{$message}}</span>
-                        @enderror
-                    </div>
 
                     {{-- Номер телефона --}}
                     <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
@@ -175,6 +145,19 @@
                             value="{{ old('email') }}">
 
                         @error('email')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
+                    </div>
+
+                    {{-- Статус --}}
+                    <div class="col-sm-6 mb-3 mt-3 mb-sm-0">
+                        <label for="is_active">Статус</label>
+                        <select class="form-control form-control-user @error('is_active') is-invalid @enderror" name="is_active">
+                            <option selected disabled>Статус Работы</option>
+                            <option value="1" selected>Активный</option>
+                            <option value="0">Не активный</option>
+                        </select>
+                        @error('is_active')
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>

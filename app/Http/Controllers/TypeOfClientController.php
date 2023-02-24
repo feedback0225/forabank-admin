@@ -18,36 +18,36 @@ class TypeOfClientController extends Controller
 
     public function store(Request $request) {
         $this->validate($request,[
-            'name'=>'required|min:3|max:128'
+            'name' => 'required|min:3|max:128'
         ]);
 
         $isExist = TypeOfClient::where('name', '=', $request->city)->first();
         if ($isExist === null) {
-            $city = new TypeOfClient();
-            $city->city = $request->input('city');
-            $city->save();
+            $typeOfClients = new TypeOfClient();
+            $typeOfClients->name = $request->input('name');
+            $typeOfClients->save();
         } else {
-            return back()->withInput()->withErrors(['city' => 'Такой город уже существует']);
+            return back()->withInput()->withErrors(['name' => 'Такой тип клиентов уже существует']);
 
         }
 
-        return redirect()->route('cities.index');
+        return redirect()->route('type_of_clients.index');
     }
 
-    public function edit(City $city) {
-        return view('offices.cities.edit')->with([
-            'city'  => $city
+    public function edit(TypeOfClient $typeOfClient) {
+        return view('offices.type_of_clients.edit')->with([
+            'typeOfClient'  => $typeOfClient
         ]);
     }
 
-    public function update(Request $request, City $city) {
+    public function update(Request $request, TypeOfClient $typeOfClient) {
         $this->validate($request,[
-            'city'=>'required|min:3|max:128'
+            'name' => 'required|min:3|max:128'
         ]);
 
-        $city->update(['city' => $request->city]);
+        $typeOfClient->update(['name' => $request->name]);
 
-        return redirect()->route('cities.index');
+        return redirect()->route('type_of_clients.index');
     }
 
     public function delete() {

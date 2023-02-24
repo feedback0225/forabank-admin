@@ -13,6 +13,6 @@ class City extends Model
 
     public function offices()
     {
-        return $this->belongsTo(Office::class);
+        return $this->hasMany(Office::class);
     }
 }

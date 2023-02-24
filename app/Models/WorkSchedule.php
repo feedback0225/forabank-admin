@@ -9,11 +9,13 @@ class WorkSchedule extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['type_of_client_id', 'schedule', 'office_id'];
+
     public function typeOfClient() {
-        return $this->hasOne(TypeOfClient::class);
+        return $this->belongsTo(TypeOfClient::class);
     }
 
     public function office() {
-        return $this->hasOne(Office::class);
+        return $this->belongsTo(Office::class);
     }
 }

@@ -9,12 +9,14 @@ class Office extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['city_id', 'name', 'address', 'lat', 'lng', 'is_active', 'phone', 'email'];
+
     public function city() {
-        return $this->hasOne(City::class);
+        return $this->belongsTo(City::class);
     }
 
     public function currencies() {
-        return $this->belongsToMany(Currency::class, 'currencies_offices', 'currency_id', 'office_id');
+        return $this->belongsToMany(Currency::class, 'currencies_offices', 'office_id', 'currency_id');
     }
 
     public function workSchedules() {

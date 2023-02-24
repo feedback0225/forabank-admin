@@ -87,9 +87,9 @@ Route::middleware('auth')->prefix('work_schedules')->name('work_schedules.')->gr
     Route::get('/', [WorkScheduleController::class, 'index'])->name('index');
     Route::get('/create', [WorkScheduleController::class, 'create'])->name('create');
     Route::post('/store', [WorkScheduleController::class, 'store'])->name('store');
-    Route::get('/edit/{work_schedule}', [WorkScheduleController::class, 'edit'])->name('edit');
-    Route::put('/update/{work_schedule}', [WorkScheduleController::class, 'update'])->name('update');
-    Route::delete('/delete/{work_schedule}', [WorkScheduleController::class, 'delete'])->name('destroy');
+    Route::get('/edit/{workSchedule}', [WorkScheduleController::class, 'edit'])->name('edit');
+    Route::put('/update/{workSchedule}', [WorkScheduleController::class, 'update'])->name('update');
+    Route::delete('/delete/{workSchedule}', [WorkScheduleController::class, 'delete'])->name('destroy');
 });
 
 // Type Of Clients
@@ -97,9 +97,9 @@ Route::middleware('auth')->prefix('type_of_clients')->name('type_of_clients.')->
     Route::get('/', [TypeOfClientController::class, 'index'])->name('index');
     Route::get('/create', [TypeOfClientController::class, 'create'])->name('create');
     Route::post('/store', [TypeOfClientController::class, 'store'])->name('store');
-    Route::get('/edit/{type_of_client}', [TypeOfClientController::class, 'edit'])->name('edit');
-    Route::put('/update/{type_of_client}', [TypeOfClientController::class, 'update'])->name('update');
-    Route::delete('/delete/{type_of_client}', [TypeOfClientController::class, 'delete'])->name('destroy');
+    Route::get('/edit/{typeOfClient}', [TypeOfClientController::class, 'edit'])->name('edit');
+    Route::put('/update/{typeOfClient}', [TypeOfClientController::class, 'update'])->name('update');
+    Route::delete('/delete/{typeOfClient}', [TypeOfClientController::class, 'delete'])->name('destroy');
 });
 
 // Currencies

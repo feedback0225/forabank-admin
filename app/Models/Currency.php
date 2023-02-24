@@ -13,6 +13,6 @@ class Currency extends Model
 
     public function offices()
     {
-        return $this->belongsToMany(Office::class, 'currencies_offices', 'office_id', 'currency_id');
+        return $this->belongsToMany(Office::class, 'currencies_offices', 'currency_id', 'office_id');
     }
 }

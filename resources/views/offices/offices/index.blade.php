@@ -52,7 +52,7 @@
                         <tbody>
                             @foreach ($offices as $office)
                                 <tr>
-                                    <td>{{ $office->city }}</td>
+                                    <td>{{ $office->city->city }}</td>
                                     <td>{{ $office->name }}</td>
                                     <td>{{ $office->address }}</td>
                                     <td>{{ $office->lat }}</td>
@@ -72,9 +72,13 @@
                                             class="btn btn-primary m-2">
                                             <i class="fa fa-pen"></i>
                                         </a>
-                                        <a class="btn btn-danger m-2" href="#" data-toggle="modal" data-target="#deleteModal">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
+                                        <form id="user-delete-form" method="POST" action="{{ route('offices.destroy', ['office' => $office->id]) }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger m-2" >
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
