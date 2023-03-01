@@ -36,7 +36,7 @@
                                             </span>
                                         @enderror
                                 </div>
-                                
+
                                 <button class="btn btn-primary btn-user btn-block">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
@@ -51,10 +51,6 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="text-center mt-5">
-        <h6 class="text-white">Developed By : <a class="text-white" href="https://techtoolindia.com">TechTool India</a></h6>
     </div>
 
 </div>
