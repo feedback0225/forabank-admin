@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-university"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Fora Landings</div>
+        <div class="sidebar-brand-text mx-3">ForaBank</div>
     </a>
 
     <!-- Divider -->
@@ -124,6 +124,62 @@
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('currencies.index') }}">Список</a>
                 <a class="collapse-item" href="{{ route('currencies.create') }}">Добавить</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Конструкторы
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp6DropDown"
+           aria-expanded="true" aria-controls="Tp6DropDown">
+            <i class="fas fa-building"></i>
+            <span>Конструктор блоков</span>
+        </a>
+        <div id="Tp6DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('offices.index') }}">Список блоков</a>
+                <a class="collapse-item" href="{{ route('offices.create') }}">Добавить</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp7DropDown"
+           aria-expanded="true" aria-controls="Tp6DropDown">
+            <i class="fas fa-building"></i>
+            <span>Конструктор форм</span>
+        </a>
+        <div id="Tp7DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('offices.index') }}">Список форм</a>
+                <a class="collapse-item" href="{{ route('offices.create') }}">Добавить</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp8DropDown"
+           aria-expanded="true" aria-controls="Tp8DropDown">
+            <i class="fas fa-building"></i>
+            <span>Конструктор страниц</span>
+        </a>
+        <div id="Tp8DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Действия:</h6>
+                <a class="collapse-item" href="{{ route('offices.index') }}">Список страниц</a>
+                <a class="collapse-item" href="{{ route('offices.create') }}">Добавить</a>
             </div>
         </div>
     </li>
