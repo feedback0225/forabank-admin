@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlockController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\HomeController;
@@ -112,3 +113,11 @@ Route::middleware('auth')->prefix('currencies')->name('currencies.')->group(func
     Route::delete('/delete/{currency}', [CurrencyController::class, 'delete'])->name('destroy');
 });
 
+
+
+// Blocks
+
+Route::middleware('auth')->prefix('blocks')->name('blocks.')->group(function () {
+    Route::get('/', [BlockController::class, 'index'])->name('index');
+    Route::delete('/delete/{block}', [BlockController::class, 'delete'])->name('destroy');
+});
