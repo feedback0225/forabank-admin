@@ -28,6 +28,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $blocks = [
+            'slider-3-tabs' => [
+                'h1' => '',
+                'iterable' => [
+                    ''
+                ]
+            ],
+            'some' => [
+
+            ]
+        ];
         return view('home');
     }
 
@@ -59,7 +70,7 @@ class HomeController extends Controller
 
         try {
             DB::beginTransaction();
-            
+
             #Update Profile Data
             User::whereId(auth()->user()->id)->update([
                 'first_name' => $request->first_name,
@@ -72,7 +83,7 @@ class HomeController extends Controller
 
             #Return To Profile page with success
             return back()->with('success', 'Profile Updated Successfully.');
-            
+
         } catch (\Throwable $th) {
             DB::rollBack();
             return back()->with('error', $th->getMessage());
@@ -98,13 +109,13 @@ class HomeController extends Controller
 
             #Update Password
             User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
-            
+
             #Commit Transaction
             DB::commit();
 
             #Return To Profile page with success
             return back()->with('success', 'Password Changed Successfully.');
-            
+
         } catch (\Throwable $th) {
             DB::rollBack();
             return back()->with('error', $th->getMessage());

@@ -4,6 +4,7 @@ use App\Http\Controllers\BlockController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\TypeOfClientController;
 use App\Http\Controllers\UserController;
@@ -120,4 +121,13 @@ Route::middleware('auth')->prefix('currencies')->name('currencies.')->group(func
 Route::middleware('auth')->prefix('blocks')->name('blocks.')->group(function () {
     Route::get('/', [BlockController::class, 'index'])->name('index');
     Route::delete('/delete/{block}', [BlockController::class, 'delete'])->name('destroy');
+});
+
+Route::middleware('auth')->prefix('landings')->name('landings.')->group(function () {
+    Route::get('/', [LandingController::class, 'index'])->name('index');
+    Route::get('/create', [LandingController::class, 'create'])->name('create');
+    Route::post('/store', [LandingController::class, 'store'])->name('store');
+    Route::get('/edit/{currency}', [LandingController::class, 'edit'])->name('edit');
+    Route::put('/update/{currency}', [LandingController::class, 'update'])->name('update');
+    Route::delete('/delete/{block}', [LandingController::class, 'delete'])->name('destroy');
 });

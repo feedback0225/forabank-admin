@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new  class extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ return new  class extends Migration
      */
     public function up()
     {
-        Schema::create('blocks', function (Blueprint $table) {
+        Schema::create('landings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('component');
-            $table->boolean('iterable')->default(0);
-            $table->json('fields')->nullable();
+            $table->string('title');
+            $table->json('blocks');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new  class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blocks');
+        Schema::dropIfExists('landings');
     }
 };
