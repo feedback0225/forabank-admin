@@ -28,12 +28,12 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#taTpDropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#taTpDropDown"
             aria-expanded="true" aria-controls="taTpDropDown">
             <i class="fas fa-user-alt"></i>
             <span>Пользователи</span>
         </a>
-        <div id="taTpDropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="taTpDropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия :</h6>
                 <a class="collapse-item" href="{{ route('users.index') }}">Список</a>
@@ -53,12 +53,12 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp1DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp1DropDown"
            aria-expanded="true" aria-controls="Tp1DropDown">
             <i class="fas fa-building"></i>
             <span>Оффисы и банкоматы</span>
         </a>
-        <div id="Tp1DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp1DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('offices.index') }}">Список</a>
@@ -69,12 +69,12 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp2DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp2DropDown"
            aria-expanded="true" aria-controls="Tp2DropDown">
             <i class="fas fa-city"></i>
             <span>Города</span>
         </a>
-        <div id="Tp2DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp2DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('cities.index') }}">Список</a>
@@ -84,12 +84,12 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp3DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp3DropDown"
            aria-expanded="true" aria-controls="Tp3DropDown">
             <i class="fas fa-calendar"></i>
             <span>Графики работ</span>
         </a>
-        <div id="Tp3DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp3DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('work_schedules.index') }}">Список</a>
@@ -99,12 +99,12 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp4DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp4DropDown"
            aria-expanded="true" aria-controls="Tp4DropDown">
             <i class="fas fa-user-alt"></i>
             <span>Типы Клиентов</span>
         </a>
-        <div id="Tp4DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp4DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('type_of_clients.index') }}">Список</a>
@@ -114,12 +114,12 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp5DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp5DropDown"
            aria-expanded="true" aria-controls="Tp5DropDown">
             <i class="fas fa-dollar-sign"></i>
             <span>Валюты</span>
         </a>
-        <div id="Tp5DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp5DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('currencies.index') }}">Список</a>
@@ -138,12 +138,12 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp6DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp6DropDown"
            aria-expanded="true" aria-controls="Tp6DropDown">
             <i class="fas fa-building"></i>
             <span>Конструктор блоков</span>
         </a>
-        <div id="Tp6DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp6DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('blocks.index') }}">Список блоков</a>
@@ -153,12 +153,12 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp7DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp7DropDown"
            aria-expanded="true" aria-controls="Tp6DropDown">
             <i class="fas fa-building"></i>
             <span>Конструктор форм</span>
         </a>
-        <div id="Tp7DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp7DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('offices.index') }}">Список форм</a>
@@ -169,12 +169,12 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Tp8DropDown"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse show" data-target="#Tp8DropDown"
            aria-expanded="true" aria-controls="Tp8DropDown">
             <i class="fas fa-building"></i>
             <span>Конструктор страниц</span>
         </a>
-        <div id="Tp8DropDown" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="Tp8DropDown" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Действия:</h6>
                 <a class="collapse-item" href="{{ route('landings.index') }}">Список страниц</a>

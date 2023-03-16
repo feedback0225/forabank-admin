@@ -21,11 +21,25 @@ class BlocksSeeder extends Seeder
             'iterable' => 1,
             'fields' => [
                 'h1' => 'Заголовок Блока',
-                'slide' => [
-                    'name' => 'Название слайда',
-                    'description' => 'Описание',
-                    'name_link' => 'Текст ссылки',
-                    'link' => 'Ссылка',
+                'slides' => [
+                    [
+                        'name' => 'Слайд №1',
+                        'description' => 'Описание',
+                        'name_link' => 'Текст ссылки',
+                        'link' => 'Ссылка'
+                    ],
+                    [
+                        'name' => 'Слайд №2',
+                        'description' => 'Описание',
+                        'name_link' => 'Текст ссылки',
+                        'link' => 'Ссылка'
+                    ],
+                    [
+                        'name' => 'Слайд №3',
+                        'description' => 'Описание',
+                        'name_link' => 'Текст ссылки',
+                        'link' => 'Ссылка'
+                    ],
                 ]
             ]
         ]);

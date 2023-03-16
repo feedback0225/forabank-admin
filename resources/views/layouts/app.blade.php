@@ -50,7 +50,7 @@
 
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('js/bootstrap.js')}}" defer></script>
+{{--    <script src="{{asset('js/bootstrap.js')}}" defer></script>--}}
     <!-- Custom scripts for all pages-->
     <script src="{{asset('admin/js/sb-admin-2.min.js')}}" defer></script>
 
