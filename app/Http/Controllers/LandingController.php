@@ -37,4 +37,21 @@ class LandingController extends Controller
 
         return redirect()->route('work_schedules.index');
     }
+
+    public function createLandingAxios(Request $request): \Illuminate\Http\JsonResponse
+    {
+        $this->validate($request,[
+            'title' => 'required|min:3|max:256',
+            'path' => 'required|min:3|max:256|unique:landings'
+        ]);
+
+        $post = new Landing;
+        $post->title = $request->title;
+        $post->path = $request->path;
+        $post->blocks = json_encode($request->blocks);
+        $post->save();
+        return response()->json([
+            'message' => 'Landing страница успешно создана'
+        ]);
+    }
 }

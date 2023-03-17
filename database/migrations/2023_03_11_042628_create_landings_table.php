@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('landings', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('path')->unique();
             $table->json('blocks');
             $table->timestamps();
         });

@@ -117,12 +117,12 @@ Route::middleware('auth')->prefix('currencies')->name('currencies.')->group(func
 
 
 // Blocks
-
 Route::middleware('auth')->prefix('blocks')->name('blocks.')->group(function () {
     Route::get('/', [BlockController::class, 'index'])->name('index');
     Route::delete('/delete/{block}', [BlockController::class, 'delete'])->name('destroy');
 });
 
+// Landings
 Route::middleware('auth')->prefix('landings')->name('landings.')->group(function () {
     Route::get('/', [LandingController::class, 'index'])->name('index');
     Route::get('/create', [LandingController::class, 'create'])->name('create');
@@ -130,4 +130,5 @@ Route::middleware('auth')->prefix('landings')->name('landings.')->group(function
     Route::get('/edit/{currency}', [LandingController::class, 'edit'])->name('edit');
     Route::put('/update/{currency}', [LandingController::class, 'update'])->name('update');
     Route::delete('/delete/{block}', [LandingController::class, 'delete'])->name('destroy');
+    Route::post('/axios/createLanding', [LandingController::class, 'createLandingAxios'])->name('create-landing-axios');
 });
